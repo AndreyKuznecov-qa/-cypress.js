@@ -15,9 +15,8 @@ describe('Тестирование для формы логина и парол�
         cy.get('.payment__submit-button').click(); // кликаем отправить
         cy.contains('Покупка прошла успешно').should('be.visible');
         cy.get('.payment__adv').click(); // кликаем вернуться в магазин
+        cy.wait(5000);
+        cy.get('.header__container > .header__id').click();
         
-
-
-
 })
 })
