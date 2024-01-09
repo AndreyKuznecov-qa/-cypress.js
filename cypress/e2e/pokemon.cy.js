@@ -4,6 +4,9 @@ describe('Тестирование для формы логина и парол�
         cy.get(':nth-child(1) > .auth__input').type('inoevcovcheg@yandex.ru'); // вводим логин
         cy.get('#password').type('FiFacomrus2011'); // вводим пароль
         cy.get('.auth__button').click();         // кликаем на вход
+        cy.wait(5000);
+        cy.get('.header__container > .header__id').click(); //вход в личный кабинет
+        cy.wait(5000);
         cy.get('.header__btns > [href="/shop"]').click(); // кликаем на магазин
         cy.get(':nth-child(1) > .shop__button').click();  // кликаем купить аватар
         cy.get('.pay__payform-v2 > :nth-child(2) > .pay_base-input-v2').type('4111 1111 1111 1111'); // вводим номер карты
