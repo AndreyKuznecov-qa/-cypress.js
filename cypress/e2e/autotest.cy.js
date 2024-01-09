@@ -45,7 +45,7 @@ describe('Тестирование для формы логина и парол�
         cy.get('#mail').type('GerMan@Dolnikov.ru'); // ищу инпут имейл и ввожу логин
         cy.get('#pass').type('iLoveqastudio1');  // ищу инпут пароля и ввожу пароль
         cy.get('#loginButton').click();
-        cy.contains('Такого логина или пароля нет').should('be.visible');
+        cy.contains('Авторизация успешна').should('be.visible');
         cy.get('#exitMessageButton > .exitIcon').should('be.visible'); 
  })
  })
