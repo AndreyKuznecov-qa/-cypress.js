@@ -8,7 +8,7 @@ describe('Тестирование для формы логина и парол�
         cy.get('.header__container > .header__id').click(); //вход в личный кабинет
         cy.wait(5000);
         cy.get('.header__btns > [href="/shop"]').click(); // кликаем на магазин
-        cy.get(':nth-child(1) > .shop__button').click();  // кликаем купить аватар
+        cy.get('.shop__list > li').not('.feature-empty').children('.shop__button').eq(0).click();  // кликаем купить аватар
         cy.get('.pay__payform-v2 > :nth-child(2) > .pay_base-input-v2').type('4111 1111 1111 1111'); // вводим номер карты
         cy.get(':nth-child(1) > .pay_base-input-v2').type('12/24'); // вводим дату карты
         cy.get('.pay-inputs-box > :nth-child(2) > .pay_base-input-v2').type('125'); // вводим код карты
